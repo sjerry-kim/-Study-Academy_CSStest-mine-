@@ -1,0 +1,346 @@
+/*
+1. CSS파일을 따로 작성하여 만들기 - O
+2. margin, padding 값 사용 - O
+3. float, flex, grid 이용한 정렬 - O
+4. class 셀렉터 접근 - O
+5. border 스타일 - O
+6. 자식, 자손 선택자 사용 - O
+7. :hover 사용 - O
+8. ::after 사용 - O
+9. 미디어 쿼리- 576px보다 작을 때 레이아웃 변경 - O
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+
+body{
+    margin: 0;
+}
+
+a{
+    color: whitesmoke;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+h2 {
+    color: whitesmoke;
+    font-size: 1.8em;
+    font-family: 'Roboto', sans-serif;
+}
+
+p{
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+main{
+    background-image: url(https://images.unsplash.com/photo-1529906920574-628dc1e49f5a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1167&q=80); opacity: 0.95;
+    background-size:cover;
+    width: 100%;
+    padding-bottom: 30px;
+}
+
+header{
+    display: flex;
+    width: 100%;
+    height: 70px;
+    justify-content: space-between;
+}
+
+header > .title{
+    padding: 30px;
+    font-size: 1.3em;
+    color: lemonchiffon;
+}
+
+header > .log-in{
+    padding: 15px;
+    font-size: 0.9em;
+}
+
+header > .log-in a{
+    padding-left: 8px;
+}
+
+nav{
+    height: 60px;
+    padding: 0 80px;
+    background-color: rgba(255,250,205,0.2);
+    position: sticky; top:0;
+}
+
+nav ul{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 0;
+}
+
+nav ul li {
+    padding: 20px 10px;
+}
+
+nav ul li a:hover{
+    background-color: rgba(255,255,255,0.3);
+    padding: 15px 8px;
+    border-radius: 10px;
+    color: rgb(2, 39, 2);
+    font-weight: bold;
+}
+
+section{
+    display: flex;
+    margin: 35px 50px;
+    padding: auto;
+    flex-wrap: wrap;
+    border: 2px solid whitesmoke;
+    border-radius: 15px;
+}
+
+.section1 article{
+    width: 350px;
+    margin: auto;
+    padding: 20px 10px 20px 20px;
+
+}
+
+.section1 article h2 {
+    margin: 0 0 0 5px;
+    padding-bottom: 11px;
+}
+
+.section1 > article img{
+    width: 305px;
+    padding: 5px;
+}
+
+.section1 > article p{
+    width: 320px;
+    margin-top: 5px;
+    padding-left: 5px;
+}
+
+.section2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 30px 20px;
+}
+
+.section2 > div{
+    width: 300px;
+    height: 250px;
+    margin: 10px auto;
+    background-color: rgba(216, 165, 32, 0.6);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+}
+
+.section2 > div:hover{
+    box-shadow: 0 0 5px lightgoldenrodyellow;
+    text-shadow: 0 0 10px greenyellow;
+}
+
+.section2 > div a{ /*손보기*/
+    text-align: center;
+    width: 100%;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.section2 > .notice{
+    width: 300px;
+    height: 250px;
+    margin: 10px auto;
+}
+
+.section2 > .notice > h2{
+    margin: 0  0 5px 0;
+    color: whitesmoke;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section2 > .notice > hr{
+    margin: 0;
+}
+
+.section2 > .notice > ul{
+    margin: 10px 0;
+    padding-left: 0;
+}
+
+.section2 > .notice > ul> li{
+    padding: 1.5px 0;
+}
+
+.section2 > .notice > ul> li:hover{
+    text-decoration-line: underline;
+    font-size: 1.05em;
+}
+
+.section2 > .notice > ul> li > .new-notice1::after{
+    content: "N";
+    font-size: 0.9em;
+    color: goldenrod;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 0 3px;
+    margin-left: 3px;
+}
+
+.section2 > .notice > ul> li > .new-notice2::after{
+    content: "N";
+    font-size: 0.9em;
+    color: goldenrod;
+    background-color: whitesmoke;
+    border-radius: 20px;
+    padding: 0 3px;
+    margin-left: 3px;
+}
+
+footer{
+    width: 100%;
+    height: 120px;
+    padding: 25px 0;
+    background-color: rgb(49, 49, 49);
+    margin: 0;
+}
+
+.details > ul> li{
+    color: whitesmoke;
+    padding: 2px;
+    font-size: 0.9em;
+}
+
+@media screen and (min-width: 1500px) {
+    
+    .section1 article{
+        width: 400px;
+        margin: auto;
+        padding: 20px 10px 20px 20px;
+    
+    }
+    
+    .section1 article h2 {
+        margin: 0 0 0 5px;
+        padding-bottom: 11px;
+    }
+    
+    .section1 > article img{
+        width: 380px;
+        padding: 5px;
+    }
+    
+    .section1 > article p{
+        width: 400px;
+        margin-top: 5px;
+        padding-left: 5px;
+    }
+
+}
+
+@media (max-width:1260px) and (min-width:881px){
+    .section1 > .article3 {
+        display: none;
+    }
+}
+
+@media (max-width:880px) and (min-width:576px){
+    .section1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section1 article{
+        width: 700px;
+        margin: auto;
+        padding: 20px 10px 20px 20px;
+    }
+
+    .section1 article div {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .section1 article h2 {
+        margin: 0 0 0 5px;
+        padding-bottom:5px;
+        font-size: 1.6em;
+    }
+    
+    .section1 > article img{
+        width: 270px;
+        height: 180px;
+        padding: 5px;
+    }
+    
+    .section1 > article p{
+        width: 100%;
+        height: 180px;
+        margin: 5px 0;
+        padding-left: 5px;
+        overflow: scroll;
+    }
+
+}
+
+
+@media screen and (max-width:575px) {
+
+    header{
+        height: 85px;
+    }
+
+    nav{
+        height: 80px;
+    }
+
+    nav ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+    nav ul li{
+        margin: 0;
+        padding: 10px 20px;
+    }
+
+    nav ul li a{
+        padding: 10px 5px;
+    }
+
+    nav ul li a:hover{
+        margin: 0;
+        padding: 10px 5px;
+    }
+
+    section{
+        flex-wrap: wrap;
+
+    }
+
+    .section1 article{
+        margin: auto;
+    }
+
+    .section2{
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .section2 div{
+        margin: 10px auto;
+        height: 150px;
+    }
+
+    .section2 .notice{
+        margin: 10px auto;
+    }
+}
